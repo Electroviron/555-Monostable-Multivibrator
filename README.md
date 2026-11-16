@@ -50,15 +50,15 @@ The 555 timer contains two comparators and an internal SR latch. These control t
 
 For a supply voltage \(V_{CC}\), the key thresholds are:
 
-- Trigger threshold: approximately \( \frac{1}{3}V_{CC} \)
-- Threshold input level: approximately \( \frac{2}{3}V_{CC} \)
+- Trigger threshold: approximately $\frac{1}{3}V_{CC}$
+- Threshold input level: approximately $\frac{2}{3}V_{CC}$
 
 The sequence of operation is:
 
 1. **Idle state:** Pin 2 is HIGH, the output is LOW, and the timing capacitor is discharged.
-2. **Button pressed:** Pin 2 is pulled below \( \frac{1}{3}V_{CC} \), setting the internal latch and driving the output HIGH.
+2. **Button pressed:** Pin 2 is pulled below $\frac{1}{3}V_{CC}$, setting the internal latch and driving the output HIGH.
 3. **Timing interval:** The discharge transistor at pin 7 turns OFF, allowing the timing capacitor to charge through the timing resistor.
-4. **Threshold reached:** When the capacitor voltage rises above approximately \( \frac{2}{3}V_{CC} \), the threshold comparator resets the latch and the output returns LOW.
+4. **Threshold reached:** When the capacitor voltage rises above approximately $\frac{2}{3}V_{CC}$, the threshold comparator resets the latch and the output returns LOW.
 5. **Discharge:** The discharge transistor turns ON and discharges the timing capacitor through pin 7.
 
 ### What Happens When the Button Is Held?
@@ -91,7 +91,7 @@ A capacitor blocks steady-state DC while allowing voltage changes to produce tra
 2. **Button pressed:** The sudden voltage drop on one side of the coupling capacitor is coupled to the trigger side, producing a brief LOW pulse at pin 2.
 3. **Trigger recovery:** While the button remains pressed, the trigger-side pull-up resistor brings pin 2 back HIGH as the transient decays.
 4. **Timing interval:** The timing capacitor charges through the timing resistor while the output remains HIGH.
-5. **Threshold reached:** When the timing capacitor reaches approximately \( \frac{2}{3}V_{CC} \), the threshold comparator resets the latch and the output returns LOW.
+5. **Threshold reached:** When the timing capacitor reaches approximately $\frac{2}{3}V_{CC}$, the threshold comparator resets the latch and the output returns LOW.
 6. **Button released:** The rising voltage creates another transient through the coupling capacitor. The clamp diode limits the positive overshoot at the trigger node.
 
 ### Component Roles
@@ -113,25 +113,25 @@ The diode is not responsible for setting the output pulse duration. Its purpose 
 
 For a conventional 555 monostable, the approximate output pulse duration is:
 
-\[
+$$
 t \approx 1.1RC
-\]
+$$
 
 Where:
 
-- \(t\) is the output pulse duration in seconds.
-- \(R\) is the timing resistance in ohms.
-- \(C\) is the timing capacitance in farads.
+- $t$ is the output pulse duration in seconds.
+- $R$ is the timing resistance in ohms.
+- $C$ is the timing capacitance in farads.
 
-For example, using a timing resistor of \(10\,k\Omega\) and a timing capacitor of \(100\,\mu F\):
+For example, using a timing resistor of $10\,k\Omega$ and a timing capacitor of $100\,\mu F$:
 
-\[
+$$
 t \approx 1.1(10{,}000)(100 \times 10^{-6})
-\]
+$$
 
-\[
+$$
 \boxed{t \approx 1.1\text{ seconds}}
-\]
+$$
 
 This is an illustrative example; use the actual timing-component values from each schematic when calculating the expected duration.
 
