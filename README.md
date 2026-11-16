@@ -52,7 +52,7 @@ The first implementation connects the push button directly to the trigger input,
 
 The 555 timer contains two comparators and an internal SR latch. These control the output according to the trigger and threshold voltages.
 
-For a supply voltage $\(V_{CC}\), the key thresholds are:
+For a supply voltage $\(V_{CC}\)$, the key thresholds are:
 
 - Trigger threshold: approximately $\frac{1}{3}V_{CC}$
 - Threshold input level: approximately $\frac{2}{3}V_{CC}$
