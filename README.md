@@ -133,7 +133,7 @@ For example, using a timing resistor of $10\,k\Omega$ and a timing capacitor of 
 
 $t \approx 1.1(10{,}000)(100 \times 10^{-6})$
 
-$\boxed{t \approx 1.1\text{ seconds}}$
+**\boxed{t \approx 1.1\text{ seconds}}**
 
 This is an illustrative example; use the actual timing-component values from each schematic when calculating the expected duration.
 
