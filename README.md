@@ -1,5 +1,7 @@
 # 555 Timer Monostable Multivibrator
 
+![pratical project image](Images/IMG_20261116_115348_342.jpg)
+
 A practical exploration of the **555 timer IC in monostable mode**, using Proteus simulation to study its operation, timing behavior, and trigger circuitry.
 
 This project explores two implementations:
