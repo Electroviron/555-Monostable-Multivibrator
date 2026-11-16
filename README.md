@@ -129,11 +129,11 @@ Where:
 - $R$ is the timing resistance in ohms.
 - $C$ is the timing capacitance in farads.
 
-For example, using a timing resistor of $$10k\Omega$$ and a timing capacitor of $$100\mu F$$:
+For example, using a timing resistor of $10\,k\Omega$ and a timing capacitor of $100\,\mu F$:
 
 $t \approx 1.1(10{,}000)(100 \times 10^{-6})$
 
-$$\boxed{t \approx 1.1\text{ seconds}}$$
+$\boxed{t \approx 1.1\text{ seconds}}$
 
 This is an illustrative example; use the actual timing-component values from each schematic when calculating the expected duration.
 
